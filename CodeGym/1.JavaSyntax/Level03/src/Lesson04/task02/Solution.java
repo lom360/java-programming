@@ -1,6 +1,4 @@
-package com.codegym.task.task03.task0306;
-
-/* 
+/*
 Parenthetical brainteaser
 
 */

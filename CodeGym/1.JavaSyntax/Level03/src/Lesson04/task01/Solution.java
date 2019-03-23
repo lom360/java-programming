@@ -1,6 +1,4 @@
-package com.codegym.task.task03.task0305;
-
-/* 
+/*
 Red scare
 
 */
