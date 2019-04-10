@@ -20,6 +20,6 @@ public class Solution {
         else {
             System.out.println("The number " + a + " is not in the interval.");
         }
-        
+
     }
 }
