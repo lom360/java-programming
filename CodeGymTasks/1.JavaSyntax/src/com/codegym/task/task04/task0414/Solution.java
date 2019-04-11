@@ -14,13 +14,22 @@ public class Solution {
 
         int year = Integer.parseInt(reader.readLine());
 
-        if(year % 400 == 0) {
-            System.out.println("Number of days in the year: 366");
-        }
-        else if(year % 100 == 0) {
-            System.out.println("Number of days in the year: 365");
-        }
-        else if(year % 4 == 0) {
+//        if(year % 400 == 0) {
+//            System.out.println("Number of days in the year: 366");
+//        }
+//        else if(year % 100 == 0) {
+//            System.out.println("Number of days in the year: 365");
+//        }
+//        else if(year % 4 == 0) {
+//            System.out.println("Number of days in the year: 366");
+//        }
+//        else {
+//            System.out.println("Number of days in the year: 365");
+//        }
+
+        // Below is the shorter method.
+        // NOTE: The order of comparison matters.
+        if(((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0)) {
             System.out.println("Number of days in the year: 366");
         }
         else {
