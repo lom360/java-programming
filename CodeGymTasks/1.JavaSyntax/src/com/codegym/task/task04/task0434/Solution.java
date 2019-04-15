@@ -12,7 +12,7 @@ public class Solution {
     public static void main(String[] args) throws Exception {
         //write your code here
         int num = 1;
-        int multiplier = 1; // Will be used to mulitple num.
+        int multiplier = 1; // Will be used to mulitiply num.
 
         while(multiplier < 11) {
             System.out.print(num * multiplier);
