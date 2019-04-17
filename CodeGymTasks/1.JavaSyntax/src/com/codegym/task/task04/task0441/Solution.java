@@ -18,6 +18,7 @@ public class Solution {
         arrList[1] = Integer.parseInt(reader.readLine());
         arrList[2] = Integer.parseInt(reader.readLine());
 
+        // Insertion Sort
         for(int i = 1; i < arrList.length; i++) {
             int key = arrList[i];
             int j = 0;
