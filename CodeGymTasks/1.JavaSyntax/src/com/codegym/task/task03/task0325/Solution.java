@@ -16,5 +16,4 @@ public class Solution {
 
         System.out.println("I will earn $" + n + " per hour");
     }
-    }
 }
