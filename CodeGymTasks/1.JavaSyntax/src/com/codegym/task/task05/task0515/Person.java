@@ -24,7 +24,7 @@ public class Person {
         this.weight = weight;
         this.size = size;
     }
-    
+
 // This method was given by the task. Omit because unnecessary for the task.
 //    public void initialize(String name, int money, char sex) {
 //        this.name = name;
