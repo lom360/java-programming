@@ -25,10 +25,18 @@ public class Solution {
         String motherName = reader.readLine();
         Cat catMother = new Cat(motherName, catGrandMother, null);
 
+        String sonName = reader.readLine();
+        Cat catSon = new Cat(sonName, catMother, catFather);
+
+        String daughterName = reader.readLine();
+        Cat catDaughter = new Cat(daughterName, catMother, catFather);
+
         System.out.println(catGrandFather.toString());
         System.out.println(catGrandMother.toString());
         System.out.println(catFather.toString());
-        System.out.println((catMother.toString()));
+        System.out.println(catMother.toString());
+        System.out.println(catSon.toString());
+        System.out.println(catDaughter.toString());
     }
 
     public static class Cat {
@@ -58,7 +66,7 @@ public class Solution {
                 return "The cat's name is " + name + ", " + mother.name + " is the mother, no father";
             }
             else {
-                return "something";
+                return "The cat's name is " + name + ", " + mother.name + " is the mother, " + father.name + " is the father";
             }
         }
     }
