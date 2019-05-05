@@ -15,6 +15,12 @@ public class Solution {
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-        
+        for(int i = 0; i < 8; i++) {
+            arr[i] = reader.readLine();
+        }
+
+        for(int i = arr.length - 1; i >= 0; i--) {
+            System.out.println(arr[i]);
+        }
     }
 }
