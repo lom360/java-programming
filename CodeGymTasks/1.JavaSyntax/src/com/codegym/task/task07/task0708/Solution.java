@@ -22,15 +22,15 @@ public class Solution {
             list.add(reader.readLine());
         }
 
-        int longestString = 0;
-        for(int i = 0; i < list.size(); i++) {
-            if(longestString < list.get(i).length()) {
-                longestString = list.get(i).length();
+        int shortestString = list.get(0).length(); // Start with first item in array.
+        for(int i = 1; i < list.size(); i++) {
+            if(shortestString > list.get(i).length()) {
+                shortestString = list.get(i).length();
             }
         }
 
         for(int i = 0; i < list.size(); i++) {
-            if(longestString == list.get(i).length()) {
+            if(shortestString == list.get(i).length()) {
                 System.out.println(list.get(i));
             }
         }
