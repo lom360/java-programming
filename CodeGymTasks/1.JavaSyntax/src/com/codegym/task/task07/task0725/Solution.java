@@ -6,6 +6,7 @@ Move one static modifier
 */
 
 public class Solution {
+    // Originally: public final int A = 5;
     public final static int A = 5;
     public final static int B = 2;
     public final static int C = A * B;
@@ -13,6 +14,7 @@ public class Solution {
     public static void main(String[] args) {
     }
 
+    // Originally: public int getValue() { return C; }
     public int getValue() {
         return C;
     }
