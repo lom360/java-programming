@@ -16,14 +16,14 @@ public class Solution {
         HashMap<String, String> map = new HashMap<String, String>();
         map.put("Snow", "Jon");
         map.put("Lanister", "Cersei");
-        map.put("Targaryen", "Danearyus");
+        map.put("Targaryen", "Daenerys");
         map.put("Stark", "Arya");
         map.put("Greyjoy", "Theon");
         map.put("Baratheon", "Robert");
-        map.put("Mormont", "Jariah");
+        map.put("Mormont", "Lyanna");
         map.put("Finger", "Little");
-        map.put("Hound", "Bob");
-        map.put("Names", "Bob");
+        map.put("Hound", "The");
+        map.put("One", "No");
 
         return map;
     }
@@ -32,10 +32,20 @@ public class Solution {
         //write your code here
         Iterator<Map.Entry<String, String>> itr = map.entrySet().iterator();
 
+        boolean hasDuplicate = false; // Turn true if we find at least one duplicate.
+        String s = itr.next().getValue(); // Copy next iteration.
+
+        // Cannot update list if iterating through list.
         while(itr.hasNext()) {
-            String s = itr.next().getValue();
-            removeItemFromMapByValue(map, s);
-            
+            if(s.equals(itr.next().getValue())) { // Turn our boolean value true when it finds duplicate.
+                hasDuplicate = true;
+                break; // Only need to check if there is at least one duplicate.
+            }
+        }
+
+        if(hasDuplicate) { // Will only run if true.
+            removeItemFromMapByValue(map, s); // This function will get rid of all values that has duplicates. Literally all.
+            removeFirstNameDuplicates(map); // Use recursion to repeat the function with update list.
         }
     }
 
