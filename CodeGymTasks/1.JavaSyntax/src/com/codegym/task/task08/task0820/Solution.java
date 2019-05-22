@@ -31,6 +31,11 @@ public class Solution {
         Cat cat3 = new Cat();
         Cat cat4 = new Cat();
 
+        resultCats.add(cat1);
+        resultCats.add(cat2);
+        resultCats.add(cat3);
+        resultCats.add(cat4);
+
         return resultCats;
     }
 
@@ -40,6 +45,10 @@ public class Solution {
         Dog dog1 = new Dog();
         Dog dog2 = new Dog();
         Dog dog3 = new Dog();
+
+        resultDogs.add(dog1);
+        resultDogs.add(dog2);
+        resultDogs.add(dog3);
 
         return resultDogs;
     }
@@ -56,7 +65,9 @@ public class Solution {
 
     public static void removeCats(Set<Object> pets, Set<Cat> cats) {
         //write your code here
-        pets.remove(cats);
+        for(Cat cat : cats) {
+            pets.remove(cat);
+        }
     }
 
     public static void printPets(Set<Object> pets) {
@@ -70,14 +81,18 @@ public class Solution {
 
     //write your code here
     public static class Cat {
-        public static void Cat() {
+        private String name;
 
+        public Cat() {
+            this.name = "Lord Cat";
         }
     }
 
     public static class Dog {
-        public  static  void  Dog() {
+        private String name;
 
+        public Dog() {
+            this.name = "Peasant Dog";
         }
     }
 }
