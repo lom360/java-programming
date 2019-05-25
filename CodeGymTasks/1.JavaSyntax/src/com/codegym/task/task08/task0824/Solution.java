@@ -58,6 +58,7 @@ public class Solution {
             this.children = new ArrayList<Human>();
         }
 
+        // Just to make this quick I made the same sex have the same values.
         public Human(boolean sex) {
             if(sex) {
                 this.name = "Bob";
