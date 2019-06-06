@@ -1,9 +1,9 @@
-package com.codegym.task.task09.task0910;
+package com.codegym.task.task09.task0911;
 
-import java.util.ArrayList;
+import java.util.HashMap;
 
 /* 
-Exception when working with List collections
+Exception when working with Map collections
 Requirements:
  • The program should display a message on the screen.
  • The program must have a try-catch block.
@@ -17,11 +17,12 @@ public class Solution {
     public static void main(String[] args) throws Exception {
         //write your code here
         try {
-            ArrayList<String> list = new ArrayList<String>();
-            String s = list.get(18);
+            HashMap<String, String> map = new HashMap<String, String>(null);
+            map.put(null, null);
+            map.remove(null);
         }
         //write your code here
-        catch(IndexOutOfBoundsException e) {
+        catch(NullPointerException e) {
             System.out.println(e);
         }
     }
