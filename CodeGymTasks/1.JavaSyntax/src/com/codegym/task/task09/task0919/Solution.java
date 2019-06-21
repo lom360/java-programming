@@ -21,10 +21,10 @@ public class Solution {
             divideByZero();
         }
         catch(ArithmeticException e) {
-            System.out.println(e);
+            e.printStackTrace();
         }
     }
-    
+
     public static void divideByZero() {
         int solution = 100 / 0;
         System.out.println(solution);
