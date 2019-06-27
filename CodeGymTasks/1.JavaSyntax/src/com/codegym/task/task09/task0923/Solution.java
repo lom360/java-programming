@@ -37,27 +37,7 @@ public class Solution {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String s = reader.readLine();
 
-        ArrayList<Character> vowels = new ArrayList<Character>();
-        ArrayList<Character> constanants = new ArrayList<Character>();
-        for(int i = 0; i < s.length(); i++) {
-            if(s.charAt(i) == ' ') {
-                continue;
-            }
-            else if(isVowel(s.charAt(i))) {
-                vowels.add(s.charAt(i));
-            }
-            else {
-                constanants.add(s.charAt(i));
-            }
-        }
-
-        for(char vowel : vowels) {
-            System.out.print(vowel);
-        }
-        System.out.println();
-        for(char constanant : constanants) {
-            System.out.print(constanant);
-        }
+        
     }
 
     // The method checks whether a letter is a vowel
