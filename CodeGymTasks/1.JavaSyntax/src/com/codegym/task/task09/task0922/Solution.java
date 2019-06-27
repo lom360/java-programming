@@ -26,12 +26,12 @@ public class Solution {
     public static void main(String[] args) throws Exception {
         //write your code here
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-
-        SimpleDateFormat simpleDate = new SimpleDateFormat("yyyy-mm-dd");
+        SimpleDateFormat simpleDate1 = new SimpleDateFormat("yyyy-MM-dd");
+        SimpleDateFormat simpleDate2 = new SimpleDateFormat("MMM dd, yyyy");
         try {
-            String inputDate = reader.readLine();
-            Date date = new Date(inputDate);
-            System.out.println(simpleDate(date));
+            String s = reader.readLine();
+            Date date = simpleDate1.parse(s);
+            System.out.println(simpleDate2.format(date).toUpperCase());
         }
         catch(Exception e) {
             System.out.println(e);
