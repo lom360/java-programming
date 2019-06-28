@@ -37,7 +37,8 @@ public class Solution {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String s = reader.readLine();
 
-        
+        s = DeleteSpaces(s);
+        System.out.println(s);
     }
 
     // The method checks whether a letter is a vowel
@@ -50,5 +51,17 @@ public class Solution {
                 return true;
         }
         return false;
+    }
+
+    public static String DeleteSpaces(String string) {
+        for(int i = 0; i < string.length(); i++) {
+            if(string.charAt(i) == ' ') {
+                // substring(0, i) goes up to the space but does not include it.
+                // substring(i + 1) includes letters all letters or characters after space.
+                string = string.substring(0, i) + string.substring(i + 1);
+            }
+        }
+
+        return string;
     }
 }
