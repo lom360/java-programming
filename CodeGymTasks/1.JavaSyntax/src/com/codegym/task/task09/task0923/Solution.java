@@ -36,9 +36,26 @@ public class Solution {
         // write your code here
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String s = reader.readLine();
+        String v = ""; // vowels
+        String c = ""; // consonants
 
         s = DeleteSpaces(s);
-        System.out.println(s);
+
+        for(int i = 0; i < s.length(); i++) {
+            if(isVowel(s.charAt(i))){
+                // If v is empty then just add the character.
+                // Else add space first then character.
+                v = v.isEmpty() ? v + s.charAt(i) : v + " " + s.charAt(i);
+            }
+            else {
+                // If c is empty then just add the character.
+                // Else add space first then character.
+                c = c.isEmpty() ? c + s.charAt(i) : c + " " + s.charAt(i);
+            }
+        }
+
+        System.out.println(v + " ");
+        System.out.println(c + " ");
     }
 
     // The method checks whether a letter is a vowel
