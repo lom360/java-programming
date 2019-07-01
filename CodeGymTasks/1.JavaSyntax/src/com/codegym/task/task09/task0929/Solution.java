@@ -22,24 +22,29 @@ public class Solution {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
+        String sourceFileName = reader.readLine();
+        InputStream fileInputStream;
+
         try {
-            String sourceFileName = reader.readLine();
-            String destinationFileName = reader.readLine();
-            InputStream fileInputStream = getInputStream(sourceFileName);
-            OutputStream fileOutputStream = getOutputStream(destinationFileName);
-
-            while (fileInputStream.available() > 0) {
-                int data = fileInputStream.read();
-                fileOutputStream.write(data);
-            }
-
-            fileInputStream.close();
-            fileOutputStream.close();
+            fileInputStream = getInputStream(sourceFileName);
         }
-        catch(Exception e) {
+        catch(IOException e) {
             System.out.println("File does not exist.");
-            String destinationFileName = reader.readLine();
+
+            sourceFileName = reader.readLine();
+            fileInputStream = getInputStream(sourceFileName);
         }
+
+        String destinationFileName = reader.readLine();
+        OutputStream fileOutputStream = getOutputStream(destinationFileName);
+
+        while (fileInputStream.available() > 0) {
+            int data = fileInputStream.read();
+            fileOutputStream.write(data);
+        }
+
+        fileInputStream.close();
+        fileOutputStream.close();
     }
 
     public static InputStream getInputStream(String fileName) throws IOException {
