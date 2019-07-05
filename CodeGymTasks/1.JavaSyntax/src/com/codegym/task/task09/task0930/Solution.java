@@ -58,13 +58,35 @@ public class Solution {
 
     public static void sort(String[] array) {
         // write your code here
+        for(int i = 0; i < array.length; i++) {
+            if(isNumber(array[i])) {
+                for(int j = i + 1; j < array.length; j++) {
+                    if(isNumber(array[j]) && isGreaterThan(array[j], array[i])) {
+                        swapIndexValue(array, i, j);
+                    }
+                }
+            }
+            else {
+                for(int j = i + 1; j < array.length; j++) {
+                    if(!isNumber(array[j]) && isGreaterThan(array[i], array[j])) {
+                        swapIndexValue(array, i, j);
+                    }
+                }
+            }
+        }
+    }
+
+    // Swap the values of the indexes. I added this piece of code.
+    public static void swapIndexValue(String[] array, int i, int j) {
+        String temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
     }
 
     // String comparison method: 'a' is greater than 'b'
     public static boolean isGreaterThan(String a, String b) {
         return a.compareTo(b) > 0;
     }
-
 
     // Is the passed string a number?
     public static boolean isNumber(String s) {
