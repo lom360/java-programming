@@ -61,13 +61,16 @@ public class Solution {
         for(int i = 0; i < array.length; i++) {
             if(isNumber(array[i])) {
                 for(int j = i + 1; j < array.length; j++) {
-                    if(isNumber(array[j]) && isGreaterThan(array[j], array[i])) {
-                        if(array[j].length() > array[i].length()){
-                            swapIndexValue(array, i, j);
-                        }
-                        else if( array[j].length() == array[i].length()) {
-                            int sizeJ = array
-                        }
+                     if(isNumber(array[j])) {
+                         if(array[j].length() > array[i].length()) {
+                             swapIndexValue(array, i, j);
+                         }
+                         else if(array[j].length() == array[i].length()) {
+                             int size = array[i].length();
+                             if(isGreaterThan(array[j].substring(size - 1), array[i].substring(size - 1))) {
+                                 swapIndexValue(array, i, j);
+                             }
+                         }
                     }
                 }
             }
