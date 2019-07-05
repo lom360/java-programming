@@ -59,12 +59,14 @@ public class Solution {
     public static void sort(String[] array) {
         // write your code here
         for(int i = 0; i < array.length; i++) {
-            if(isNumber(array[i])) {
+            if(isNumber(array[i])) { // Checks if string is a number.
                 for(int j = i + 1; j < array.length; j++) {
-                     if(isNumber(array[j])) {
+                     if(isNumber(array[j])) { // Checks if the iterating index value is also a number.
+                         // If length of j is greater than i then it definitely greater.
                          if(array[j].length() > array[i].length()) {
                              swapIndexValue(array, i, j);
                          }
+                         // If lengths are equal then must compare the final number to know what's greater.
                          else if(array[j].length() == array[i].length()) {
                              int size = array[i].length();
                              if(isGreaterThan(array[j].substring(size - 1), array[i].substring(size - 1))) {
@@ -74,7 +76,7 @@ public class Solution {
                     }
                 }
             }
-            else {
+            else { // This is if it's a non-number string.
                 for(int j = i + 1; j < array.length; j++) {
                     if(!isNumber(array[j]) && isGreaterThan(array[i], array[j])) {
                         swapIndexValue(array, i, j);
