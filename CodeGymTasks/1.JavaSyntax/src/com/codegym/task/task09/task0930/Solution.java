@@ -62,7 +62,12 @@ public class Solution {
             if(isNumber(array[i])) {
                 for(int j = i + 1; j < array.length; j++) {
                     if(isNumber(array[j]) && isGreaterThan(array[j], array[i])) {
-                        swapIndexValue(array, i, j);
+                        if(array[j].length() > array[i].length()){
+                            swapIndexValue(array, i, j);
+                        }
+                        else if( array[j].length() == array[i].length()) {
+                            int sizeJ = array
+                        }
                     }
                 }
             }
