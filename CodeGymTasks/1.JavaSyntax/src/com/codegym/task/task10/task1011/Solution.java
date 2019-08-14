@@ -27,13 +27,10 @@ public class Solution {
 
         //write your code here
         int count = 0;
-        for(int i = 0; ; i++) {
+        for(int i = 0; s.length() >= 6; i++) { // salary has 6 letters. So we stop loop when string length is 6.
             System.out.println(s);
             s = s.substring(1);
-            count++;
         }
-
-        System.out.println(count);
     }
 }
 
