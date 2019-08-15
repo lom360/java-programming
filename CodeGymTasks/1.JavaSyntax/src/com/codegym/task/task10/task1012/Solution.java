@@ -49,7 +49,7 @@ public class Solution {
         }
 
         // write your code here
-
+        // Creating map that will use the alphabet as keys and values will be the count of those letters.
         HashMap<Character, Integer> map = new HashMap<Character,Integer>();
         for(Character i : alphabet) {
             map.put(i, 0);
@@ -58,11 +58,14 @@ public class Solution {
 
         for(String words : list) {
             for(int i = 0; i < words.length(); i++) {
+
+            // The count will also check if key exist.
             int count = map.containsKey(words.charAt(i)) ? map.get(words.charAt(i)) : 0;
-            map.put(words.charAt(i), count + 1);
+            map.put(words.charAt(i), count + 1); // Increments value of the key.
         }
     }
 
+        // Prints the alphabets and the number of times it appears.
         for(Character i : alphabet) {
           System.out.println(i + " " + map.get(i));
        }
