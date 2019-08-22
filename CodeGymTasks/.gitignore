@@ -7,10 +7,11 @@ target/
 .repository/
 *.iml
 *.iws
+*.tcs
+*.java
 *.class
 *.info
 *.properties
-
 
 /3.JavaMultithreading/
 /4.JavaCollections/
