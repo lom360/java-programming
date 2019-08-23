@@ -23,7 +23,7 @@ public class Solution {
 
     //write your code here
     public static int min(int x, int y) {
-        return x < y ? x : y; // used the ternary operator to simplify code.
+        return x < y ? x : y; // Used the ternary operator to simplify code.
     }
 
     public static long min(long x, long y) {
