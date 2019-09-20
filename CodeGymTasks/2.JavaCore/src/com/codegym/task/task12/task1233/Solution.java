@@ -33,7 +33,6 @@ public class Solution {
                 min = i;
             }
         }
-
         return new Pair<Integer, Integer>(array[min], min);
     }
 
