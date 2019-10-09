@@ -21,15 +21,14 @@ public class Solution {
     public static void main(String[] args) {
         // write your code here
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        String fileName = reader.readLine();
-        File file = new File(fileName);
+
         try {
-
-
-            BufferedWriter writer = new BufferedWriter(fw);
+            String fileName = reader.readLine();
+            FileWriter file = new FileWriter(fileName);
+            BufferedWriter writer = new BufferedWriter(file);
 
             while(true) {
-                String keyWords = userInput.readLine();
+                String keyWords = reader.readLine();
                 writer.write(keyWords);
                 writer.newLine();
 
