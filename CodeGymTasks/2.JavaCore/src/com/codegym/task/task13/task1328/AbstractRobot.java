@@ -12,7 +12,6 @@ public abstract class AbstractRobot implements CanAttack, CanDefend {
         } else if (hitCount == 2) {
             attackedBodyPart = BodyPart.HEAD;
         } else if (hitCount == 3) {
-            hitCount = 0;
             attackedBodyPart = BodyPart.LEG;
         } else {
             hitCount = 0;
@@ -30,7 +29,6 @@ public abstract class AbstractRobot implements CanAttack, CanDefend {
         } else if (hitCount == 2) {
             defendedBodyPart = BodyPart.LEG;
         } else if (hitCount == 3) {
-            hitCount = 0;
             defendedBodyPart = BodyPart.ARM;
         } else {
             hitCount = 0;
