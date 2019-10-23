@@ -40,30 +40,15 @@ public class Solution {
         hen.getMonthlyEggCount();
     }
 
-    abstract class Hen {
-        int getMonthlyEggCount() {
-            return 0;
-        }
-
-        String getDescription() {
-            return "I am a chicken.";
-        }
-    }
-
     static class HenFactory {
         static Hen getHen(String continent) {
             Hen hen = null;
             //write your code here
+
             return hen;
         }
     }
 
-    public class NorthAmericanHen extends Hen {
-        int getMonthlyEggCount() {
-            return 1000000;
-        }
-        String
-    }
 
     public class EuropeanHen extends Hen {
         int getMonthlyEggCount() {
