@@ -44,27 +44,19 @@ public class Solution {
         static Hen getHen(String continent) {
             Hen hen = null;
             //write your code here
-
+            if(continent.equals(Continent.AFRICA)) {
+                hen = new AfricanHen();
+            }
+            else if(continent.equals(Continent.ASIA)) {
+                hen = new AsianHen();
+            }
+            else if(continent.equals(Continent.EUROPE)) {
+                hen = new EuropeanHen();
+            }
+            else if(continent.equals(Continent.NORTHAMERICA)) {
+                hen = new NorthAmericanHen();
+            }
             return hen;
-        }
-    }
-
-
-    public class EuropeanHen extends Hen {
-        int getMonthlyEggCount() {
-            return 100;
-        }
-    }
-
-    public class AsianHen extends Hen {
-        int getMonthlyEggCount() {
-            return 100000;
-        }
-    }
-
-    public class AfricanHen extends Hen {
-        int getMonthlyEggCount() {
-            return 1;
         }
     }
 }
