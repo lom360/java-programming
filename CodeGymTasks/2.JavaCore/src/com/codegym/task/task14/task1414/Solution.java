@@ -34,10 +34,18 @@ public class Solution {
     public static void main(String[] args) throws Exception {
         // Read several keys (strings) from the console. Item 7
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        Movie movie = null;
 
         while(true) {
             String movieType = reader.readLine();
+
+            if(movieType.equals("soapOpera") || movieType.equals("cartoon") || movieType.equals("thriller")) {
+                movie = MovieFactory.getMovie(movieType);
+            }
+            else break;
         }
+
+        System.out.println(movie.getClass().getSimpleName());
 
         /*
             8. Create a variable movie in the Movie class, and for each entered string (key):
@@ -56,14 +64,13 @@ public class Solution {
             if ("soapOpera".equals(key)) {
                 movie = new SoapOpera();
             }
+            //write your code here. Items 5, 6
             else if ("cartoon".equals(key)) {
                 movie = new Cartoon();
             }
             else if ("thriller".equals(key)) {
                 movie = new Thriller();
             }
-
-            //write your code here. Items 5, 6
 
             return movie;
         }
