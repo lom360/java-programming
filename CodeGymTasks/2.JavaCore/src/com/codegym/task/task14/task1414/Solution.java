@@ -27,9 +27,17 @@ Requirements:
 7. For each valid string entered, you need to display the simple name (movie.getClass().getSimpleName()) of the object types returned by the MovieFactory.getMovie method.
 */
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
 public class Solution {
     public static void main(String[] args) throws Exception {
         // Read several keys (strings) from the console. Item 7
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+
+        while(true) {
+            String movieType = reader.readLine();
+        }
 
         /*
             8. Create a variable movie in the Movie class, and for each entered string (key):
@@ -48,6 +56,12 @@ public class Solution {
             if ("soapOpera".equals(key)) {
                 movie = new SoapOpera();
             }
+            else if ("cartoon".equals(key)) {
+                movie = new Cartoon();
+            }
+            else if ("thriller".equals(key)) {
+                movie = new Thriller();
+            }
 
             //write your code here. Items 5, 6
 
@@ -62,4 +76,11 @@ public class Solution {
     }
 
     // Write your classes here. Item 3
+    static class Cartoon extends Movie {
+
+    }
+
+    static class Thriller extends Movie {
+
+    }
 }
