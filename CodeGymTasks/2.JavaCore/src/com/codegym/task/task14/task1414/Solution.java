@@ -37,15 +37,16 @@ public class Solution {
         Movie movie = null;
 
         while(true) {
-            String movieType = reader.readLine();
+            String key = reader.readLine();
+            movie = MovieFactory.getMovie(key);
 
-            if(movieType.equals("soapOpera") || movieType.equals("cartoon") || movieType.equals("thriller")) {
-                movie = MovieFactory.getMovie(movieType);
+            if(key.equals("soapOpera") || key.equals("cartoon") || key.equals("thriller")) {
+                System.out.println(movie.getClass().getSimpleName());
             }
-            else break;
+            else {
+                break;
+            }
         }
-
-        System.out.println(movie.getClass().getSimpleName());
 
         /*
             8. Create a variable movie in the Movie class, and for each entered string (key):
