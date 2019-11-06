@@ -25,17 +25,26 @@ Requirements:
 public class Solution {
     public static void main(String[] args) {
         List<Number> list = new LinkedList<>();
+
+
+    }
+
+    public static void initList(List<Number> list) {
         // 3
         list.add(new Double(1000f));
         list.add(new Double("123e-445632"));
         list.add(new Float(-90 / -3));
-        list.remove(new Double("123e-445632"));
+        //list.remove(new Double("123e-445632"));
+    }
 
+    public static void printListValues(List<Number> list) {
         // 4 - Correct 2 bugs
-        for (int i = 0; i <= list.size(); i--) {
+        for (int i = 0; i < list.size(); i++) {
             System.out.println(list.get(i));
         }
+    }
 
+    public static void processCastObjects(List<Number> list) {
         // 5
         for (Number object : list) {
             // Correct 2 bugs
