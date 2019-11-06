@@ -25,8 +25,6 @@ Requirements:
 public class Solution {
     public static void main(String[] args) {
         List<Number> list = new LinkedList<>();
-
-
     }
 
     public static void initList(List<Number> list) {
@@ -49,10 +47,10 @@ public class Solution {
         for (Number object : list) {
             // Correct 2 bugs
             if (object instanceof Float) {
-                Double a = (Double) object;
+                Float a = (Float) object;
                 System.out.println("Is float defined? " + !(a.isNaN()));
             } else if (object instanceof Double) {
-                Float a = (Float) object;
+                Double a = (Double) object;
                 System.out.println("Is double infinite? " + a.isInfinite());
             }
         }
