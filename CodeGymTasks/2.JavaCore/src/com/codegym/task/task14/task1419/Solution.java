@@ -1,5 +1,7 @@
 package com.codegym.task.task14.task1419;
 
+import java.io.IOException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,6 +37,14 @@ public class Solution {
         }
 
         //write your code here
-
+        exceptions.add(new NullPointerException());
+        exceptions.add(new IndexOutOfBoundsException());
+        exceptions.add(new RuntimeException());
+        exceptions.add(new NumberFormatException());
+        exceptions.add(new ArrayIndexOutOfBoundsException());
+        exceptions.add(new StringIndexOutOfBoundsException());
+        exceptions.add(new SQLException());
+        exceptions.add(new IOException());
+        exceptions.add(new ClassNotFoundException());
     }
 }
