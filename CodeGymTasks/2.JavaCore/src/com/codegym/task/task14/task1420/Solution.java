@@ -25,6 +25,11 @@ public class Solution {
         try {
             input1 = Integer.parseInt(reader.readLine());
             input2 = Integer.parseInt(reader.readLine());
+
+            // The problem is asking for positive numbers.
+            if(!CheckPositive(input1, input2)) {
+                throw new Exception();
+            }
         }
         catch(Exception e) {
             throw e;
@@ -40,6 +45,15 @@ public class Solution {
         }
         else {
             return GCD(y, remainder);
+        }
+    }
+
+    public static boolean CheckPositive(int x, int y) {
+        if(x > 0 && y > 0) {
+            return true;
+        }
+        else {
+            return false;
         }
     }
 }
