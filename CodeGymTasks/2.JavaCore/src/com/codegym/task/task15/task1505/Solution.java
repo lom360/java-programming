@@ -21,7 +21,7 @@ Requirements:
 
 public class Solution {
     public static interface LivingPart {
-        boolean containsBones();
+        Object containsBones();
     }
 
     public static class BodyPart implements LivingPart {
@@ -31,7 +31,7 @@ public class Solution {
             this.name = name;
         }
 
-        public boolean containsBones() {
+        public Object containsBones() {
             return true;
         }
 
@@ -48,8 +48,13 @@ public class Solution {
             this.isArtificial = isArtificial;
         }
 
-        public boolean containsBones() {
-            return super.containsBones() && !isArtificial;
+        public Object containsBones() {
+            if(super.containsBones() && !isArtificial) {
+                return "Yes";
+            }
+            else {
+                return "No";
+            }
         }
     }
 
