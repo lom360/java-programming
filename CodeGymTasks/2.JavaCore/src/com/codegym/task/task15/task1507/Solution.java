@@ -14,15 +14,6 @@ Requirements:
 public class Solution {
     public static void main(String[] args) {
         printMatrix(2, 3, "8");
-        printMatrix(2, 3, new Long(8));
-        printMatrix(2, 3, new Character('8'));
-        printMatrix(2, 3, new Short(8));
-        printMatrix(2, 3, "8");
-        printMatrix(2, 3, "8");
-        printMatrix(2, 3, "8");
-        printMatrix(2, 3, "8");
-        printMatrix(2, 3, "8");
-        printMatrix(2, 3, "8");
     }
 
     public static void printMatrix(int m, int n, Byte value) {
@@ -50,7 +41,7 @@ public class Solution {
         printMatrix(m, n, (Object) value);
     }
 
-    public static void printmatrix(int m, int n, Integer value) {
+    public static void printMatrix(int m, int n, Integer value) {
         System.out.println("Filling with Integer objects");
         printMatrix(m, n, (Object) value);
     }
@@ -60,7 +51,7 @@ public class Solution {
         printMatrix(m, n, (Object) value);
     }
 
-    public static void printMatix(int m, int n, Boolean value) {
+    public static void printMatrix(int m, int n, Boolean value) {
         System.out.println("Filling with Boolean values");
         printMatrix(m, n, (Object) value);
     }
