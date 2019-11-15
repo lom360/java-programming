@@ -32,11 +32,11 @@ public class Solution {
         }
 
         public Object containsBones() {
-            return true;
+            return "Yes";
         }
 
         public String toString() {
-            return containsBones() ? name + " contains bones" : name + " does not contain bones";
+            return containsBones().equals("Yes") ? name + " contains bones" : name + " does not contain bones";
         }
     }
 
@@ -49,7 +49,7 @@ public class Solution {
         }
 
         public Object containsBones() {
-            if(super.containsBones() && !isArtificial) {
+            if(super.containsBones().equals("Yes") && !isArtificial) {
                 return "Yes";
             }
             else {
