@@ -24,6 +24,14 @@ public class Solution {
 
     public static final int MIN = min(A, B);
 
+    static {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+
+        try {
+
+        }
+    }
+
     public static void main(String[] args) {
         System.out.println(MIN);
     }
