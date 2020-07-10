@@ -1,4 +1,4 @@
-package com.codegym.task.task01.task0131;
+package codegym.task.task01.task0131;
 import java.lang.Math;
 
 /* 
