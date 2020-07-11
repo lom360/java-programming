@@ -1,0 +1,84 @@
+package com.codegym.task.task09.task0923;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
+/* 
+Vowels and consonants
+Write a program that reads a string from the keyboard.
+The program should display two lines:
+1. The first line contains only the vowels from the entered string.
+2. The second contains only the consonants and punctuation marks from the entered string.
+The letters should be separated by a space, each line must end with a space.
+
+Example input:
+Sam I Am.
+
+Example output:
+a I A
+S m m .
+
+
+Requirements:
+1. The program must read data from the keyboard.
+2. The program should display two lines.
+3. The first line should contain only the vowels from the input string, separated by a space.
+4. The second line should contain only the consonants and punctuation marks from the input string, separated by a space.
+5. Each line must end with a space.
+*/
+
+public class Solution {
+    public static char[] vowels = new char[]{'a', 'e', 'i', 'o', 'u'};
+
+    public static void main(String[] args) throws Exception {
+        // write your code here
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        String s = reader.readLine();
+        String v = ""; // vowels
+        String c = ""; // consonants
+
+        s = DeleteSpaces(s);
+
+        for(int i = 0; i < s.length(); i++) {
+            if(isVowel(s.charAt(i))){
+                // If v is empty then just add the character.
+                // Else add space first then character.
+                v = v.isEmpty() ? v + s.charAt(i) : v + " " + s.charAt(i);
+            }
+            else {
+                // If c is empty then just add the character.
+                // Else add space first then character.
+                c = c.isEmpty() ? c + s.charAt(i) : c + " " + s.charAt(i);
+            }
+        }
+
+        System.out.println(v + " ");
+        System.out.println(c + " ");
+    }
+
+    // The method checks whether a letter is a vowel
+    public static boolean isVowel(char c) {
+        c = Character.toLowerCase(c);  // Convert to lowercase
+
+        for (char d : vowels)   // Look for vowels in the array
+        {
+            if (c == d)
+                return true;
+        }
+        return false;
+    }
+
+    public static String DeleteSpaces(String string) {
+        for(int i = 0; i < string.length(); i++) {
+            if(string.charAt(i) == ' ') {
+                // substring(0, i) goes up to the space but does not include it.
+                // substring(i + 1) includes letters all letters or characters after space.
+                string = string.substring(0, i) + string.substring(i + 1);
+            }
+        }
+
+        return string;
+    }
+}
