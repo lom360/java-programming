@@ -1,4 +1,4 @@
-package com.codegym.task.task03.task0307;
+package level3.task07;
 
 /* 
 Hello, StarCraft!

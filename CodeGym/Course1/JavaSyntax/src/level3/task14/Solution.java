@@ -1,4 +1,4 @@
-package com.codegym.task.task03.task0314;
+package level3.task14;
 
 /* 
 Multiplication table

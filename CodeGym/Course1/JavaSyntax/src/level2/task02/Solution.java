@@ -1,4 +1,4 @@
-package codegym.level2.task02.task0202;
+package level2.task02;
 
 public class Solution {
     public static void main(String[] args) {

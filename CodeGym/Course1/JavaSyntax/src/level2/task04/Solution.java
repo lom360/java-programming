@@ -1,4 +1,4 @@
-package codegym.level2.task02.task0204;
+package level2.task04;
 
 /*
 Family relations
