@@ -1,0 +1,11 @@
+Create 3 Dog objects.
+Store each instance in a separate variable.
+Give them the names "Max", "Bella", and "Jack".
+
+Requirements:
+•	The program should not display text on the screen.
+•	The main method should have only three Dog variables.
+•	The variables must be immediately assigned values.
+•	Each Dog object must be assigned a name.
+•	The Dog class must have a single variable called name.
+•	The Dog class should not have methods.
