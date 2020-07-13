@@ -1,0 +1,7 @@
+Comment out as many lines as possible to display the number 19
+
+Requirements:
+•	The program should display the number 19.
+•	Don't change the lines that declare variables.
+•	Don't change the line responsible for screen output.
+•	You need to comment out some lines and leave the remaining lines unchanged.
